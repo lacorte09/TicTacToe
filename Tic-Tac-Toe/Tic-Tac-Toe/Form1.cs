@@ -8,9 +8,7 @@ namespace Tic_Tac_Toe
             InitializeComponent();
         }
 
-        char turn = 'X';
-        
-        String[] button = new string[9];
+        char turn = 'X'; 
 
         public void reset()
         {
@@ -32,6 +30,17 @@ namespace Tic_Tac_Toe
             button7.Enabled = true;
             button8.Enabled = true;
             button9.Enabled = true;
+            button1.BackColor = System.Drawing.Color.White;
+            button2.BackColor = System.Drawing.Color.White;
+            button3.BackColor = System.Drawing.Color.White;
+            button4.BackColor = System.Drawing.Color.White;
+            button5.BackColor = System.Drawing.Color.White;
+            button6.BackColor = System.Drawing.Color.White;
+            button7.BackColor = System.Drawing.Color.White;
+            button8.BackColor = System.Drawing.Color.White;
+            button9.BackColor = System.Drawing.Color.White;
+            turn = 'X';
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +54,14 @@ namespace Tic_Tac_Toe
             else
             {
                 turn = 'X';
+            }
+            if (turn.Equals('X'))
+            {
+                button1.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button1.BackColor = System.Drawing.Color.Cyan;
             }
         }
 
@@ -60,6 +77,14 @@ namespace Tic_Tac_Toe
             {
                 turn = 'X';
             }
+            if (turn.Equals('X'))
+            {
+                button2.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button2.BackColor = System.Drawing.Color.Cyan;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -73,6 +98,14 @@ namespace Tic_Tac_Toe
             else
             {
                 turn = 'X';
+            }
+            if (turn.Equals('X'))
+            {
+                button3.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button3.BackColor = System.Drawing.Color.Cyan;
             }
         }
 
@@ -88,6 +121,14 @@ namespace Tic_Tac_Toe
             {
                 turn = 'X';
             }
+            if (turn.Equals('X'))
+            {
+                button4.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button4.BackColor = System.Drawing.Color.Cyan;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -101,6 +142,14 @@ namespace Tic_Tac_Toe
             else
             {
                 turn = 'X';
+            }
+            if (turn.Equals('X'))
+            {
+                button5.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button5.BackColor = System.Drawing.Color.Cyan;
             }
         }
 
@@ -116,6 +165,14 @@ namespace Tic_Tac_Toe
             {
                 turn = 'X';
             }
+            if (turn.Equals('X'))
+            {
+                button6.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button6.BackColor = System.Drawing.Color.Cyan;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -130,7 +187,14 @@ namespace Tic_Tac_Toe
             {
                 turn = 'X';
             }
-
+            if (turn.Equals('X'))
+            {
+                button7.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button7.BackColor = System.Drawing.Color.Cyan;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -145,6 +209,14 @@ namespace Tic_Tac_Toe
             {
                 turn = 'X';
             }
+            if (turn.Equals('X'))
+            {
+                button8.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button8.BackColor = System.Drawing.Color.Cyan;
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -158,6 +230,14 @@ namespace Tic_Tac_Toe
             else
             {
                 turn = 'X';
+            }
+            if (turn.Equals('X'))
+            {
+                button9.BackColor = System.Drawing.Color.Red;
+            }
+            else if (turn.Equals('O'))
+            {
+                button9.BackColor = System.Drawing.Color.Cyan;
             }
         }
 
