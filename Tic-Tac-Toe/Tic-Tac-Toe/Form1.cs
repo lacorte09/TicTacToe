@@ -45,14 +45,24 @@ namespace Tic_Tac_Toe
                 }
                 if (combination.Equals("OOO"))
                 {
+                    reset();
                     MessageBox.Show("0 has won the game!", "We have a winner!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else if (combination.Equals("XXX"))
-                { 
+                {
+                    reset();
                     MessageBox.Show("X has won the game!", "We have a winner!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+                else
+                {
+                    if (currentTurn == 9)
+                    {
+                        reset();
+                        MessageBox.Show("We have a draw!", "No winner", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
             }
-        }
+        }     
         public void reset()
         {
             button1.Text = "";
@@ -83,6 +93,7 @@ namespace Tic_Tac_Toe
             button8.BackColor = System.Drawing.Color.White;
             button9.BackColor = System.Drawing.Color.White;
             turn = 'X';
+            currentTurn = 0;
             
         }
 
@@ -301,10 +312,6 @@ namespace Tic_Tac_Toe
             }
             Winner();
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            reset(); 
-        }
+       
     }
 }
