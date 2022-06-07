@@ -8,8 +8,51 @@ namespace Tic_Tac_Toe
             InitializeComponent();
         }
 
-        char turn = 'X'; 
+        char turn = 'X';
+        int currentTurn = 0;
 
+        public void Winner()
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                String combination = "";
+                switch (i)
+                {
+                    case 0:
+                        combination = button1.Text + button2.Text + button3.Text;
+                        break;
+                    case 1:
+                        combination = button4.Text + button5.Text + button6.Text;
+                        break;
+                    case 2:
+                        combination = button7.Text + button8.Text + button9.Text;
+                        break;
+                    case 3:
+                        combination = button1.Text + button4.Text + button7.Text;
+                        break;
+                    case 4:
+                        combination = button2.Text + button5.Text + button8.Text;
+                        break;
+                    case 5:
+                        combination = button3.Text + button6.Text + button9.Text;
+                        break;
+                    case 6:
+                        combination = button1.Text + button5.Text + button9.Text;
+                        break;
+                    case 7:
+                        combination = button7.Text + button5.Text + button3.Text;
+                        break;
+                }
+                if (combination.Equals("OOO"))
+                {
+                    MessageBox.Show("0 has won the game!", "We have a winner!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (combination.Equals("XXX"))
+                { 
+                    MessageBox.Show("X has won the game!", "We have a winner!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
         public void reset()
         {
             button1.Text = "";
@@ -45,6 +88,7 @@ namespace Tic_Tac_Toe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button1.Text = turn.ToString();
             button1.Enabled = false;
             if (turn == 'X')
@@ -63,10 +107,12 @@ namespace Tic_Tac_Toe
             {
                 button1.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
+           
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button2.Text = turn.ToString();
             button2.Enabled = false;
             if (turn == 'X')
@@ -85,10 +131,12 @@ namespace Tic_Tac_Toe
             {
                 button2.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button3.Text = turn.ToString();
             button3.Enabled = false;
             if (turn == 'X')
@@ -107,10 +155,12 @@ namespace Tic_Tac_Toe
             {
                 button3.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button4.Text = turn.ToString();
             button4.Enabled = false;
             if (turn == 'X')
@@ -129,10 +179,12 @@ namespace Tic_Tac_Toe
             {
                 button4.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button5.Text = turn.ToString();
             button5.Enabled = false;
             if (turn == 'X')
@@ -151,10 +203,12 @@ namespace Tic_Tac_Toe
             {
                 button5.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button6.Text = turn.ToString();
             button6.Enabled = false;
             if (turn == 'X')
@@ -173,10 +227,12 @@ namespace Tic_Tac_Toe
             {
                 button6.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button7.Text = turn.ToString();
             button7.Enabled = false;
             if (turn == 'X')
@@ -195,10 +251,12 @@ namespace Tic_Tac_Toe
             {
                 button7.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button8.Text = turn.ToString();
             button8.Enabled = false;
             if (turn == 'X')
@@ -217,10 +275,12 @@ namespace Tic_Tac_Toe
             {
                 button8.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            currentTurn++;
             button9.Text = turn.ToString();
             button9.Enabled = false;
             if (turn == 'X')
@@ -239,6 +299,7 @@ namespace Tic_Tac_Toe
             {
                 button9.BackColor = System.Drawing.Color.Cyan;
             }
+            Winner();
         }
 
         private void button10_Click(object sender, EventArgs e)
