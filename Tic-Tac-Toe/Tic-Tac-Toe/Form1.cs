@@ -315,7 +315,7 @@ namespace Tic_Tac_Toe
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Place XXX or OOO straight or diagonally in order to win. X plays first and the game auto-resets whenever there is a winner or a draw.");
+            MessageBox.Show("Place XXX or OOO straight or diagonally in order to win. X plays first and the game auto-resets whenever there is a winner or a draw.", "How To Play?");
         }
     }
 }
